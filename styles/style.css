@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body::-webkit-scrollbar {
+    width: 16px;               /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #1E062D;        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #1E062D;    /* цвет плашки */
+    border-radius: 5px;       /* закругления плашки */
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    border: 3px solid red;  /* padding вокруг плашки */
+  }
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* ХУЙНЯ СВЕРХУ ПОПРОБУЙ КАРТИНКУ ВСТАВИТЬ Я НЕ ЕБУ */
+.header {
+    padding: 5%;
+    text-align: center;
+    /*background-color: #83C5E9;*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(30, 6, 45, 0.9)), url(../img/back_title.png);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* размер хуиты h1 */
+.header h1 {
+  padding: 1%;
+  font-size: 40px;
+  text-shadow: 3px 3px 1px #1e062d;
+/*  background: rgba(161,21,207, 0.5);*/
+  /*background-color: red;*/
+}
+
+/* размер хуиты p */
+.header p {
+    font-size: 20px;
+    text-shadow: #FFFFFF 3px 3px 15px;
+/*    background: rgba(161,21,207, 0.5);*/
+   /* color: white;*/
+  }
+
+/* стиль верхнего навигационного меню типо я не ебу бля*/
+.navbar {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #1E062D;
+}
+
+/* стиль навигации ссылок верхней хуиты*/
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* смена цвета при наведении на ссылку */
+.navbar a:hover {
+    background-color: #ffffff;
+    color: red;
+}
+
+/* контейнер колонн? */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* СОЗДАНИЕ ДВУХ КОЛОНОК ТИПА Я ДУМАЮ ДА */
+/* Левая\мелкая колонка */
+.side {
+    color: red;
+    background: linear-gradient(rgb(30, 6, 45), rgb(50, 50, 50));
+    flex: 30%;
+    /*background-color: #f1f1f1;*/
+    padding: 20px;
+    font-size: 175%;
+}
+
+/* Типо главная колонка */
+.main {   
+    background: linear-gradient(rgb(75, 75, 75), rgb(75, 75, 75));
+    color: white;
+    flex: 70%;
+    /*background-color: white;*/
+    padding: 20px;
+    font-size: 175%;
+}
+
+
+/* фейковая картинка, чисто заполнитель */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* подвал */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(rgb(50, 50, 50), rgb(50, 50, 50));
+    color: red;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+} */
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width:100%;
+    }
+} */
+
+/* ### ### ### 03
+.b03_skewed_slide_in {
+    width: 33%;
+    overflow: hidden;
+    border: #000000 solid 1px;
+}
+
+.b03_skewed_slide_in div {
+    position: absolute;
+    text-align: center;
+    width: 10%;
+    height: 50px;
+    display: block;
+    /* box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; */
+    /* padding: 10px; */
+}
+
+.b03_skewed_slide_in div:nth-child(1) {
+    color: #FFFFFF;
+    background-color: #1e062d;
+}
+
+.b03_skewed_slide_in div:nth-child(2) {
+    background-color: #000000;
+    width: 230px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: translate(-250px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-250px, 0px) skewX(-30deg);
+    -moz-transform: translate(-250px, 0px) skewX(-30deg);
+}
+
+.b03_skewed_slide_in div:nth-child(3) {
+    color: #ffffff;
+    left: -200px;
+    transition: left 0.2s ease;
+    -webkit-transition: left 0.2s ease;
+    -moz-transition: left 0.2s ease;
+}
+
+.b03_skewed_slide_in:hover div:nth-child(2) {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transform: translate(-15px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-15px, 0px) skewX(-30deg);
+    -moz-transform: translate(-15px, 0px) skewX(-30deg);
+}
+
+.b03_skewed_slide_in:hover div:nth-child(3) {
+    left: 0px;
+    transition: left 0.30000000000000004s ease;
+    -webkit-transition: left 0.30000000000000004s ease;
+    -moz-transition: left 0.30000000000000004s ease;
+}
+
+.back {
+    width: 33%;
+    /* height: 200px; */
+    /* float: left;
+    background-color: #eeeeee;
+    border: 10px; */
+    /* border-color: #ffffff;
+    border-style: solid;
+    box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; */
+    /* counter-increment: bc; */
+    /* padding: 0px 5px 5px 5px; */
+} */
+
+/* .thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%)
+    height: 0; 
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .thumb-wrap iframe {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    border-width: 0;
+    outline-width: 0;
+  } */
